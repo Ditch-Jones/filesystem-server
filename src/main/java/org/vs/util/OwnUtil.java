@@ -18,7 +18,7 @@ public class OwnUtil {
         client = ClientBuilder.newClient();
         Response[] r = new Response[ips.length];
         for(int i = 0; i<ips.length; i++){
-            r[i] = client.target("http://"+ips[i] +"/myapp/update").request().post(Entity.json(filesystem));
+            r[i] = client.target("http://"+ips[i] +"/").request().post(Entity.json(filesystem));
             map.put(r[i],ips[i]);
         }
         return map;

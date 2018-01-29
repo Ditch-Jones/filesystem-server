@@ -39,7 +39,7 @@ public class Main {
      * @throws IOException
      */
     public static void main(String[] args) throws IOException {
-        map.put("female","192.168.2.125:9090");
+        map.put("Joshua","192.168.2.105:9090");
         final HttpServer server = startServer();
         System.out.println(String.format("Jersey app started with WADL available at "
                 + "%sapplication.wadl\nHit enter to stop it...", BASE_URI));

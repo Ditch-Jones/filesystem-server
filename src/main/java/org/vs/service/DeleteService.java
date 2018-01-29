@@ -32,7 +32,7 @@ public class DeleteService {
                 ResponseBuilder rb = Response.ok(ip);
                 client = ClientBuilder.newClient();
                 //TODO URL noch an richtige Client-Adresse anpassen
-                Response r = client.target("http://"+ip+"/myapp/delete").request().post(Entity.json(jsonString));
+                Response r = client.target("http://"+ip+"/fileSystem/DeleteFile").request().post(Entity.json(jsonString));
                 return rb.build();
             }else{
                 return Response.status(Response.Status.BAD_REQUEST).build();

@@ -45,7 +45,7 @@ public class OwnJsonUtil {
 
     public static JSONObject readInputStream(InputStream is) throws IOException, ParseException {
         JSONParser jp = new JSONParser();
-        JSONObject jo = null;
+        JSONObject jo;
         jo = (JSONObject) jp.parse(new InputStreamReader(is, "UTF-8"));
 
         return jo;

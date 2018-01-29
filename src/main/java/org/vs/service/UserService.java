@@ -25,11 +25,15 @@ public class UserService {
             FilesystemMessage fsm = OwnJsonUtil.jsonObjectToFSM(jo);
             //Eigentlicher Aufruf der dieses JSONObject in der DB speichert
             Main.map.put(fsm.getOrigin(),fsm.getIp());
+            System.out.println("filesystem: "+fsm.getFilesystem().toJSONString());
             ResponseBuilder rb  = Response.ok();
             return rb.build();
         }catch(IOException | ParseException e ){
             e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).build();
+        }catch(Exception ee){
+            ee.printStackTrace();
+            return  Response.status(Response.Status.BAD_REQUEST).build();
         }
     }
 }
