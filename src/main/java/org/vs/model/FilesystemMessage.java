@@ -41,7 +41,6 @@ public class FilesystemMessage {
         this.filesystem = filesystem;
     }
 
-
     @Override
     public String toString() {
         return "FilesystemMessage{" +

@@ -27,11 +27,9 @@ public class UserService {
             Main.map.put(fsm.getOrigin(),fsm.getIp());
             ResponseBuilder rb  = Response.ok();
             return rb.build();
-        }catch(IOException | ParseException e){
+        }catch(IOException | ParseException e ){
             e.printStackTrace();
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
     }
-
-
 }

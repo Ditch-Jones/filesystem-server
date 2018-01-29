@@ -3,7 +3,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.vs.Main;
 import org.vs.model.DeleteMessage;
-import org.vs.model.RenameMessage;
 import org.vs.util.OwnJsonUtil;
 
 import javax.ws.rs.*;
@@ -27,7 +26,7 @@ public class DeleteService {
             String jsonString = jo.toJSONString();
 
             DeleteMessage dlm = OwnJsonUtil.jsonObjectToDLM(jo);
-            String ip = (String)Main.map.get(dlm.getOrigin());
+            String ip = (String)Main.map.get(dlm.getDestination());
 
             if(ip != null){
                 ResponseBuilder rb = Response.ok(ip);

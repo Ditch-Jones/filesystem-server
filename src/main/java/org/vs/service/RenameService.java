@@ -29,7 +29,7 @@ public class RenameService {
             String jsonString = jo.toJSONString();
 
             RenameMessage rnm = OwnJsonUtil.jsonObjectToRNM(jo);
-            String ip = (String) Main.map.get(rnm.getOrigin());
+            String ip = (String) Main.map.get(rnm.getDestination());
 
             if(ip != null){
                 ResponseBuilder rb = Response.ok(ip);
