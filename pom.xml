@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <name>filesystem-server</name>
 
-    <dependencyManagement>
+      <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.glassfish.jersey</groupId>
@@ -150,7 +150,6 @@
                     </configuration>
                 </plugin>
             </plugins>
-
     </build>
 
     <properties>

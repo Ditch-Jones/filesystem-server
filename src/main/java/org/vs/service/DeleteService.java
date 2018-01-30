@@ -1,4 +1,5 @@
 package org.vs.service;
+
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.vs.Main;
@@ -27,12 +28,12 @@ public class DeleteService {
 
             DeleteMessage dlm = OwnJsonUtil.jsonObjectToDLM(jo);
             String ip = (String)Main.map.get(dlm.getDestination());
-
+            System.out.println(ip);
             if(ip != null){
                 ResponseBuilder rb = Response.ok(ip);
                 client = ClientBuilder.newClient();
                 //TODO URL noch an richtige Client-Adresse anpassen
-                Response r = client.target("http://"+ip+"/fileSystem/DeleteFile").request().post(Entity.json(jsonString));
+                Response r = client.target("http://"+ip+"/rest/fileSystem/DeleteFile").request().post(Entity.json(jsonString));
                 return rb.build();
             }else{
                 return Response.status(Response.Status.BAD_REQUEST).build();

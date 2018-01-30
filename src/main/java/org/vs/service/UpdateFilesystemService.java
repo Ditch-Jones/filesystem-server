@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 
-@Path("/update")
+
 public class UpdateFilesystemService {
     private Client client;
     @POST
@@ -37,7 +37,7 @@ public class UpdateFilesystemService {
 
 
             //TODO noch nicht getestet bzw. muss noch ganz überarbeitet werden, ist nur ein erster Ansatz
-            HashMap map = OwnUtil.groupCastFilesystem(ips,filesystem);
+            //HashMap map = OwnUtil.groupCastFilesystem(ips,filesystem);
             //OwnUtil.retryGroupCastFilesystem(map,filesystem);
 
             Response.ResponseBuilder rb  = Response.ok();

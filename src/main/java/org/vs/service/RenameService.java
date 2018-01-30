@@ -35,6 +35,7 @@ public class RenameService {
                 ResponseBuilder rb = Response.ok(ip);
                 client = ClientBuilder.newClient();
                 //TODO URL noch an richtige Client-Adresse anpassen
+
                 Response r = client.target("http://"+ip+"/rest/fileSystem/RenameFile").request().post(Entity.json(jsonString));
                 return rb.build();
             }else{

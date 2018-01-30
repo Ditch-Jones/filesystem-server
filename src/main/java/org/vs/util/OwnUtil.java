@@ -12,8 +12,9 @@ import java.util.HashMap;
 
 public class OwnUtil {
     private static Client client;
-    private static HashMap<Response,String> map = new HashMap<>();
 
+
+    /*
     public static HashMap groupCastFilesystem(String[] ips, JSONObject filesystem){
         client = ClientBuilder.newClient();
         Response[] r = new Response[ips.length];
@@ -28,7 +29,7 @@ public class OwnUtil {
     /**
      * Sendet an alle Clients erneut das filesystem, wenn diese den Responsewert 503(Service Unavailable) geliefert haben
      * @param filesystem Das Aktuelle Dateisystem
-     */
+     *//*
     public static void retryGroupCastFilesystem(HashMap<Response,String> map, JSONObject filesystem){
         client = ClientBuilder.newClient();
         String[] ips = new String[map.size()];
@@ -41,4 +42,5 @@ public class OwnUtil {
         }
         groupCastFilesystem(ips,filesystem);
     }
+    */
 }
